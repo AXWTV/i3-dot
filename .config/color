@@ -1,0 +1,29 @@
+------------------------------------------
+
+ ██████╗ ██████╗ ██╗      ██████╗ ██████╗ 
+██╔════╝██╔═══██╗██║     ██╔═══██╗██╔══██╗
+██║     ██║   ██║██║     ██║   ██║██████╔╝
+██║     ██║   ██║██║     ██║   ██║██╔══██╗
+╚██████╗╚██████╔╝███████╗╚██████╔╝██║  ██║
+ ╚═════╝ ╚═════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═╝
+                                          
+------------------------------------------
+
+red = #f7768e
+orange = #ff9e64
+light-orange = #e0af68
+green = #9ece6a
+aqua-dlight = #73daca
+aqua = #b4f9f8
+aqua-dark = #2ac3de
+blue = #7dcfff
+purple = #7aa2f7
+purple-dark = #bb9af7
+purple-light1 = #c0caf5
+purple-light2 = #a9b1d6
+purple-light3 = #9aa5ce
+white = #cfc9c2
+dark-purple1 = #565f89
+dark-purple2 = #414868
+dark-purple3 = #1a1b26
+
