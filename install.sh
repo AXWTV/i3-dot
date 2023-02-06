@@ -20,6 +20,10 @@ cp .config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 cp -r .zshrc ~/.zshrc
 
 echo "Cofigering Files Done!"
+
+echo "wallpaper set up"
+cp .wallpaper ~/.wallpaper
+
 echo "Font set up"
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/JetBrainsMono.zip
 wget https://use.fontawesome.com/releases/v6.2.1/fontawesome-free-6.2.1-desktop.zip
