@@ -1,6 +1,7 @@
 #/!bin/bash
 
 echo "starting installation..."
+cd
 
 echo "Installing Dependencies {Arch-Only}"
 sudo pacman -S i3-gaps polybar alacritty rofi feh brave-browser && yay -S picom-git
