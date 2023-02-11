@@ -10,6 +10,7 @@ mkdir -p ~/.config/i3
 mkdir -p ~/.config/polybar
 mkdir -p ~/.config/picom
 mkdir -p ~/.config/alacritty
+mkdir -p ~/.config/neofetch
 
 cp .config/i3/config ~/.config/i3/config
 cp .config/polybar/config.ini ~/.config/polybar/config.ini
@@ -18,6 +19,7 @@ chmod +x ~/.config/polybar/launch.sh
 cp .config/picom/picom.conf ~/.config/picom/picom.conf
 cp .config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 cp -r .zshrc ~/.zshrc
+cp .config/neofetch/config.conf ~/.config/neofetch/config.conf
 
 echo "Cofigering Files Done!"
 
