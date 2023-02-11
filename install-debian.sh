@@ -1,21 +1,27 @@
 #/!bin/bash
 
 echo "starting installation..."
-
+cd
 sudo apt update
 
 echo "Installing Dependencies {Deb-Only}"
 sudo apt install -y i3-gaps polybar alacritty rofi feh snapd
-sudo apt install -y libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-dpms0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-glx0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl-dev libegl-dev libpcre2-dev libevdev-dev uthash-dev libev-dev libx11-xcb-dev meson
-sudo apt install -y cmake ninja-build
+sudo apt install -y libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-dpms0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-glx0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl-dev libegl-dev libpcre2-dev libevdev-dev uthash-dev libev-dev libx11-xcb-dev
+sudo apt install -y cmake meson git pkg-config asciidoc
 
 echo "picom building"
 git clone https://github.com/yshui/picom.git
+
 cd picom
+
 git submodule update --init --recursive
+
 meson setup --buildtype=release . build
+
 ninja -C build
-ninja -C build install
+
+sudo ninja -C build install
+
 cd ..
 
 echo "Configering Config Files"
@@ -31,7 +37,7 @@ cp .config/polybar/launch.sh ~/.config/polybar/launch.sh
 chmod +x ~/.config/polybar/launch.sh
 cp .config/picom/picom.conf ~/.config/picom/picom.conf
 cp .config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
-cp -r .zshrc ~/.zshrc
+#cp -r .zshrc ~/.zshrc
 cp .config/neofetch/config.conf ~/.config/neofetch/config.conf
 
 echo "Cofigering Files Done!"
@@ -49,7 +55,14 @@ cp fontawesome-free-6.2.1-desktop.zip ~/.fonts/
 cd ~/.fonts/
 unzip JetBrainsMono.zip 
 unzip fontawesome-free-6.2.1-desktop.zip 
+cd ~/Dotfile
 
 echo "Get Awesome Font and JetBrainMono Nerd Font Done!"
+
+echo "Oh-My-Zsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+cp .zshrc ~/.zshrc
+
 echo "installation Complite!"
+
 
