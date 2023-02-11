@@ -37,7 +37,7 @@ cp .config/neofetch/config.conf ~/.config/neofetch/config.conf
 echo "Cofigering Files Done!"
 
 echo "wallpaper set up"
-cp .wallpaper ~/.wallpaper
+cp -r .wallpaper ~/.wallpaper
 
 echo "Font set up"
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/JetBrainsMono.zip
