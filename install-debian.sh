@@ -2,8 +2,9 @@
 
 echo "starting installation..."
 
-echo "Installing Dependencies {Deb-Only}"
 sudo apt update
+
+echo "Installing Dependencies {Deb-Only}"
 sudo apt install -y i3-gaps polybar alacritty rofi feh brave-browser snapd
 sudo snap install -y code --classic
 sudo apt install -y libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-dpms0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-glx0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl-dev libegl-dev libpcre2-dev libevdev-dev uthash-dev libev-dev libx11-xcb-dev meson
@@ -54,5 +55,4 @@ unzip fontawesome-free-6.2.1-desktop.zip
 
 echo "Get Awesome Font and JetBrainMono Nerd Font Done!"
 echo "installation Complite!"
-
 
