@@ -16,7 +16,7 @@ git submodule update --init --recursive
 meson setup --buildtype=release . build
 ninja -C build
 ninja -C build install
-cd
+cd ..
 
 echo "Configering Config Files"
 mkdir -p ~/.config/i3
