@@ -31,7 +31,7 @@ mkdir -p ~/.config/picom
 mkdir -p ~/.config/alacritty
 mkdir -p ~/.config/neofetch
 
-cd Dotfiles/
+cd ~/Dotfiles
 
 cp .config/i3/config ~/.config/i3/config
 cp .config/polybar/config.ini ~/.config/polybar/config.ini
@@ -57,7 +57,7 @@ cp fontawesome-free-6.2.1-desktop.zip ~/.fonts/
 cd ~/.fonts/
 unzip JetBrainsMono.zip 
 unzip fontawesome-free-6.2.1-desktop.zip 
-cd ~/Dotfile
+cd ~/Dotfiles
 
 echo "Get Awesome Font and JetBrainMono Nerd Font Done!"
 
