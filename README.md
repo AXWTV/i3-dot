@@ -1,5 +1,5 @@
 # Dotfiles
-<p><code>version: v1.0.0</code> <code>repo-size: 39.543MB</code></p>
+<p><code>version: v1.0.0</code> <code>repo-size: 37.4 MiB</code></p>
 make sure to have vs code and other programs
 <code>Simple</code>
 <details>
