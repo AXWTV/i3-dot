@@ -63,7 +63,7 @@ echo "Get Awesome Font and JetBrainMono Nerd Font Done!"
 
 echo "Oh-My-Zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-cp .zshrc ~/.zshrc
+cp -r .zshrc ~/.zshrc
 
 echo "installation Complite!"
 
