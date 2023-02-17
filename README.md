@@ -12,6 +12,8 @@ git clone https://github.com/AXWTV/Dotfiles.git
 ```
  Run 
  ```bash 
- ./install 
+$ ./install-debian.sh
+or
+$ ./install-arch.sh
  ```
 </details>
