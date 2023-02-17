@@ -31,6 +31,8 @@ mkdir -p ~/.config/picom
 mkdir -p ~/.config/alacritty
 mkdir -p ~/.config/neofetch
 
+cd Dotfiles/
+
 cp .config/i3/config ~/.config/i3/config
 cp .config/polybar/config.ini ~/.config/polybar/config.ini
 cp .config/polybar/launch.sh ~/.config/polybar/launch.sh
