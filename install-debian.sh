@@ -33,7 +33,7 @@ cp .config/polybar/launch.sh ~/.config/polybar/launch.sh
 chmod +x ~/.config/polybar/launch.sh
 cp .config/picom/picom.conf ~/.config/picom/picom.conf
 cp .config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
-#cp -r .zshrc ~/.zshrc
+cp -r .zshrc ~/.zshrc
 cp .config/neofetch/config.conf ~/.config/neofetch/config.conf
 
 echo "Cofigering Files Done!"
@@ -57,7 +57,6 @@ echo "Get Awesome Font and JetBrainMono Nerd Font Done!"
 
 echo "Oh-My-Zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-cp -r .zshrc ~/.zshrc
 
 echo "installation Complite!"
 
