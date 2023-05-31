@@ -177,8 +177,18 @@ case "$OPTION" in
 	cd
 
 	echo "Installing Dependencies {Red_Hat-Only}"
-	sudo dnf install i3-gaps polybar alacritty neofetch cpufetch rofi feh
-	
+	sudo dnf install -y i3-gaps polybar alacritty neofetch cpufetch rofi feh
+	sudo dnf install -y dbus-devel gcc git libconfig-devel libdrm-devel libev-devel libX11-devel libX11-xcb libXext-devel libxcb-devel libGL-devel libEGL-devel meson pcre2-devel pixman-devel uthash-devel xcb-util-image-devel xcb-util-renderutil-devel xorg-x11-proto-devel asciidoc
+
+	echo "picom building"
+	git clone https://github.com/yshui/picom.git
+	cd picom
+	git submodule update --init --recursive
+	meson setup --buildtype=release . build
+	ninja -C build
+	sudo ninja -C build install
+	cd ..
+
 	echo "Configering Confg Files"
 	mkdir -p ~/.config/i3
 	mkdir -p ~/.config/polybar
