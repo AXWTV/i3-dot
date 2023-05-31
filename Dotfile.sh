@@ -16,8 +16,9 @@ printf "\e[1;34m
 │ [2]  Restore                         │
 │ [3]  Installation deb system .file   │ 
 │ [4]  Installation arch syatem .file  │
-│ [5]  Install oh-my-zsh               │ 
-│ [6]  .zshrc cp error                 │ 
+│ [5]  Installation redhat system .file│
+│ [6]  Install oh-my-zsh               │
+│ [7]  .zshrc cp error                 │ 
 │ [0]  Exit                            │
 └──────────────────────────────────────┘
 \e[0m"
@@ -172,13 +173,58 @@ case "$OPTION" in
 	echo "Get Awesome Font and JetBrainMono Nerd Font Done!"
 	echo "installation Complite!"
 	;;
-5)
+5)	echo "Starting installation..."
+	cd
+
+	echo "Installing Dependencies {Red_Hat-Only}"
+	sudo dnf install i3-gaps polybar alacritty neofetch cpufetch rofi feh
+	
+	echo "Configering Confg Files"
+	mkdir -p ~/.config/i3
+	mkdir -p ~/.config/polybar
+	mkdir -p ~/.config/picom
+	mkdir -p ~/.config/alacritty
+	mkdir -p ~/.config/neofetch
+
+	cd ~/Dotfiles
+
+	cp .config/i3/config ~/.config/i3/config
+	cp .config/polybar/config.ini ~/.config/polybar/config.ini
+	cp .config/polybar/launch.sh ~/.config/polybar/launch.sh
+	chmod +x ~/.config/polybar/launch.sh
+	cp .config/picom/picom.conf ~/.config/picom/picom.conf
+	cp .config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+	cp -r .zshrc ~/.zshrc
+	cp .config/neofetch/config.conf ~/.config/neofetch/config.conf
+
+	echo "Cofigering Files Done!"
+
+	echo "wallpaper set up"
+	cp -r .wallpaper ~/.wallpaper
+
+	echo "Font set up"
+	wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/JetBrainsMono.zip
+	wget https://use.fontawesome.com/releases/v6.2.1/fontawesome-free-6.2.1-desktop.zip
+	mkdir ~/.fonts
+	cp JetBrainsMono.zip ~/.fonts/
+	cp fontawesome-free-6.2.1-desktop.zip ~/.fonts/
+	cd ~/.fonts/
+	unzip JetBrainsMono.zip 
+	unzip fontawesome-free-6.2.1-desktop.zip
+
+	cd ~/Dotfiles
+
+	echo "Get Awesome Font and JetBrainMono Nerd Font Done!"
+	echo "installation Complite!"
+
+	;;
+6)
 	echo "Oh-My-Zsh"
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 	echo "installation Complite! run [6]"
 	;;
-6)
+7)
 	cp -r ~/.zshrc .zshrc
 	;;
 0)
