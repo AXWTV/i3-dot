@@ -248,7 +248,8 @@ case "$OPTION" in
 	echo "installation Complite! run [6]"
 	;;
 7)
-	cp -r ~/.zshrc .zshrc
+  rm -r ~/.zshrc
+	cp -r .zshrc ~/.zshrc
 	;;
 0)
 	echo "Exiting"
