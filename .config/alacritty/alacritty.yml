@@ -1,3 +1,10 @@
+import:
+  # uncomment the flavour you want below:
+  - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
+#  - ~/.config/alacritty/catppuccin/catppuccin-macchiato.yml
+#  - ~/.config/alacritty/catppuccin/catppuccin-frappe.yml
+#  - ~/.config/alacritty/catppuccin/catppuccin-latte.yml
+
 window:
   padding:
     x: 10
@@ -27,28 +34,28 @@ font:
   size: 10
 draw_bold_text_with_bright_colors: true
 
-colors:
-  primary:
-    background: "#1a1b26"
-    foreground: "#cfc9c2"
-  normal:
-    black: "#32344a"
-    red: "#f7768e"
-    green: "#9ece6a"
-    yellow: "#e0af68"
-    blue: "#7aa2f7"
-    magenta: "#ad8ee6"
-    cyan: "#449dab"
-    white: "#787c99"
-  bright:
-    black: "#1a1b26"
-    red: "#f7768e"
-    green: "#9ece6a"
-    yellow: "#ff9e64"
-    blue: "#7dcfff"
-    magenta: "#bb9af7"
-    cyan: "#2ac3de"
-    white: "#cfc9c2"
+#colors:
+#  primary:
+#    background: "#1a1b26"
+#    foreground: "#cfc9c2"
+#  normal:
+#    black: "#32344a"
+#    red: "#f7768e"
+#    green: "#9ece6a"
+#    yellow: "#e0af68"
+#    blue: "#7aa2f7"
+#    magenta: "#ad8ee6"
+#    cyan: "#449dab"
+#    white: "#787c99"
+#  bright:
+#    black: "#1a1b26"
+#    red: "#f7768e"
+#    green: "#9ece6a"
+#    yellow: "#ff9e64"
+#    blue: "#7dcfff"
+#    magenta: "#bb9af7"
+#    cyan: "#2ac3de"
+#    white: "#cfc9c2"
 
 selection:
   save_to_clipboard: false

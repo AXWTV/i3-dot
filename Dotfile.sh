@@ -33,10 +33,12 @@ case "$OPTION" in
 	rm -r .config/picom
 	rm -r .zshrc
 	rm -r .config/neofetch
-	rm -r .wallpaper
+  rm -r .confin/nvim
+  rm -r .wallpaper
 	
 	cp -r ~/.config/alacritty/ .config/alacritty
-	cp -r ~/.config/polybar/ .config/polybar
+	cp -r ~/.config/nvim/ .config/nvim
+  cp -r ~/.config/polybar/ .config/polybar
 	cp -r ~/.config/i3/ .config/i3
 	cp -r ~/.config/picom/ .config/picom
 	cp -r ~/.config/neofetch .config/neofetch
@@ -53,6 +55,7 @@ case "$OPTION" in
 	rm -r ~/.config/i3
 	rm -r ~/.config/picom
 	rm -r ~/.config/neofetch
+  rm -r ~/.config/nvim
 	rm -r ~/.zshrc
 	rm -r ~/.wallpaper
 
@@ -61,9 +64,12 @@ case "$OPTION" in
 	mkdir -p ~/.config/picom
 	mkdir -p ~/.config/alacritty
 	mkdir -p ~/.config/neofetch
+  mkdir -p ~/.config/nvim
 
-	cp .config/i3/config ~/.config/i3/config
-	cp .config/polybar/config.ini ~/.config/polybar/config.ini
+
+  cp .config/i3/config ~/.config/i3/config
+	cp .config/nvim ~/.config/nvim
+  cp .config/polybar/config.ini ~/.config/polybar/config.ini
 	cp .config/polybar/launch.sh ~/.config/polybar/launch.sh
 	chmod +x ~/.config/polybar/launch.sh
 	cp .config/picom/picom.conf ~/.config/picom/picom.conf
@@ -80,7 +86,7 @@ case "$OPTION" in
 	echo "Installing Dependencies {Deb-Only}"
 	sudo apt install -y i3-gaps polybar alacritty rofi feh snapd
 	sudo apt install -y libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-dpms0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-glx0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl-dev libegl-dev libpcre2-dev libevdev-dev uthash-dev libev-dev libx11-xcb-dev
-	sudo apt install -y cmake meson pkg-config asciidoc curl neofetch
+	sudo apt install -y cmake meson pkg-config asciidoc curl neofetch nvim vim
 
 	echo "picom building"
 	git clone https://github.com/yshui/picom.git
@@ -97,10 +103,12 @@ case "$OPTION" in
 	mkdir -p ~/.config/picom
 	mkdir -p ~/.config/alacritty
 	mkdir -p ~/.config/neofetch
+  mkdir -p ~/.config/nvim
 
 	cd ~/Dotfiles
 
 	cp .config/i3/config ~/.config/i3/config
+  cp .config/nvim ~/.config/nvim/
 	cp .config/polybar/config.ini ~/.config/polybar/config.ini
 	cp .config/polybar/launch.sh ~/.config/polybar/launch.sh
 	chmod +x ~/.config/polybar/launch.sh
@@ -133,19 +141,22 @@ case "$OPTION" in
 	cd
 
 	echo "Installing Dependencies {Arch-Only}"
-	sudo pacman -S i3-gaps polybar alacritty neofetch rofi feh brave-browser && yay -S picom-git
+	sudo pacman -S i3-gaps polybar alacritty neofetch rofi feh vim nvim && yay -S picom-git
 
 	echo "Configering Config Files"
 	mkdir -p ~/.config/i3
 	mkdir -p ~/.config/polybar
 	mkdir -p ~/.config/picom
 	mkdir -p ~/.config/alacritty
-	mkdir -p ~/.config/neofetch
+	mkdir -p ~/.config/neofetch/
+  mkdir -p ~/.config/nvim
+
 
 	cd ~/Dotfiles
 
 	cp .config/i3/config ~/.config/i3/config
-	cp .config/polybar/config.ini ~/.config/polybar/config.ini
+	cp .config/nvim ~/.config/nvim/
+  cp .config/polybar/config.ini ~/.config/polybar/config.ini
 	cp .config/polybar/launch.sh ~/.config/polybar/launch.sh
 	chmod +x ~/.config/polybar/launch.sh
 	cp .config/picom/picom.conf ~/.config/picom/picom.conf
@@ -194,11 +205,13 @@ case "$OPTION" in
 	mkdir -p ~/.config/polybar
 	mkdir -p ~/.config/picom
 	mkdir -p ~/.config/alacritty
+  mkdir -p ~/.config/nvim
 	mkdir -p ~/.config/neofetch
 
 	cd ~/Dotfiles
 
 	cp .config/i3/config ~/.config/i3/config
+  cp .config/nvim ~/.config/nvim/
 	cp .config/polybar/config.ini ~/.config/polybar/config.ini
 	cp .config/polybar/launch.sh ~/.config/polybar/launch.sh
 	chmod +x ~/.config/polybar/launch.sh

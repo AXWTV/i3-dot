@@ -48,7 +48,7 @@ floating_modifier $mod
 default_border pixel 0
 
 gaps inner 10
-gaps outer 30
+gaps outer 10
 
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
@@ -189,17 +189,16 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# class                 border  backgr. text    indicator child_border
-client.focused          #7dcfff #7dcfff #cfc9c2 #7dcfff   #7dcfff
-client.focused_inactive #414868 #414868 #cfc9c2 #414868   #414868
-client.unfocused        #414868 #414868 #888888 #414868   #414868
-client.urgent           #2f343a #900000 #ffffff #900000   #900000
-client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
-
-client.background       #ffffff
+# target                 title     bg    text   indicator  border
+client.focused           $pink     $base $text  $rosewater $pink
+client.focused_inactive  $mauve    $base $text  $rosewater $mauve
+client.unfocused         $mauve    $base $text  $rosewater $mauve
+client.urgent            $peach    $base $peach $overlay0  $peach
+client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
+client.background        $base
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-exec_always ~/.config/polybar/launch.sh
+exec_always ~/.config/polybar/launch.sh --colorblocks
 exec_always feh --bg-fill  ~/.wallpaper/wall3.png
 exec_always picom --legacy-backends -b
