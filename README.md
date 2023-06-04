@@ -1,8 +1,6 @@
 # Dotfiles
 <p><code>version: v1.7.9</code> <code>repo-size: 37.4 MiB</code></p>
-make sure to have vs code and other programs
-
-
+<br>
 # Programs
 
 |       Program       |                                                             Name                                                              |
