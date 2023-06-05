@@ -9,8 +9,8 @@
 |         Bar         |                                         [polybar](https://github.com/polybar/polybar)                                         |
 |     Compositor      |                                      [picom-yshui](https://github.com/yshui/picom)                                            |
 |      Launcher       |                                          [rofi](https://github.com/davatorium/rofi)                                           |
-|  Wallpaper Setter   |                                              [feh](https://feh.finalrewind.org/)                                              |
-|     Web Browser     |                                     [Vivaldi](https://vivaldi.com/desktop/)                                                   |
+|  Wallpaper Setter   |                                              [nitrogen](https://github.com/l3ib/nitrogen)                                     |
+|     Web Browser     |                                     [vivaldi](https://vivaldi.com/desktop/)                                                   |
 |     Lockscreen      |                                   [i3lock-color](https://github.com/Raymo111/i3lock-color)                                    |
 |  Terminal Emulator  |                                      [Alacritty](https://github.com/alacritty/alacritty)                                      |
 |        Shell        |                                                  [zsh](https://www.zsh.org)                                                   |
