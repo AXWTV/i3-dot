@@ -19,6 +19,8 @@ printf "\e[1;34m
 │ [5]  Install oh-my-zsh                             │
 │ [6]  Build Picom                                   │
 │ [7]  .zshrc cp error                               │
+│ [8]  Wallpaper Nitrogen                            │
+│ [9]  Fonts                                         │
 │ [0]  Exit                                          │
 └────────────────────────────────────────────────────┘
 \e[0m"
@@ -36,6 +38,7 @@ case "$OPTION" in
   mkdir -p ~/.config/nvim
   mkdir -p ~/.config/neofetch
   mkdir -p ~/.config/rofi
+  mkdir -p ~/.config/nitrogen
   
   cd ~/Dotfiles
   
@@ -69,7 +72,7 @@ case "$OPTION" in
   echo "starting installation..."
   cd
   echo "Installing Dependencies {Arch-Only}"
-  sudo pacman -S i3-gaps polybar alacritty neofetch rofi feh vim nvim && yay -S picom-git
+  sudo pacman -S i3-gaps polybar alacritty neofetch rofi feh curl vim nvim && yay -S picom-git
   
   cd ~/Dotfiles
   echo "Done!"
@@ -80,8 +83,8 @@ case "$OPTION" in
   cd
   echo "Installing Dependencies {Red_Hat-Only}"
   sudo dnf copr enable atim/bottom -y
-  sudo dnf install -y i3-gaps polybar bottom dunst alacritty neofetch neovim vim rofi feh nitrogenp
-  sudo dnf install -y dbus-devel gcc git libconfig-devel libdrm-devel libev-devel libX11-devel libX11-xcb libXext-devel libxcb-devel libGL-devel libEGL-devel meson pcre2-devel pixman-devel uthash-devel xcb-util-image-devel xcb-util-renderutil-devel xorg-x11-proto-devel asciidoc
+  sudo dnf install -y i3-gaps polybar bottom dunst alacritty neofetch neovim vim rofi feh nitrogen
+  sudo dnf install -y dbus-devel gcc git libconfig-devel libdrm-devel libev-devel libX11-devel libX11-xcb libXext-devel libxcb-devel libGL-devel libEGL-devel meson pcre2-devel pixman-devel uthash-devel xcb-util-image-devel xcb-util-renderutil-devel xorg-x11-proto-devel asciidoc curl
 
   cd ~/Dotfiles
   echo "Done!"
@@ -102,13 +105,35 @@ case "$OPTION" in
   meson setup --buildtype=release . build
   ninja -C build
   sudo ninja -C build install
-  cd ..
   cd ~/Dotfiles
   ;;
 
 7)
   rm -r ~/.zshrc
   cp -r .zshrc ~/.zshrc
+  ;;
+
+8)
+  echo "Wallpaper"
+  echo "wallpaper set up"
+	git clone https://github.com/AXWTV/AXWTV_AniWall.git ~/.config/wallpaper/
+  cd .config/nitrogen ~/.config/
+  ;;
+
+9)
+  echo "fonts"
+  wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/JetBrainsMono.zip
+  wget https://use.fontawesome.com/releases/v6.2.1/fontawesome-free-6.2.1-desktop.zip
+
+  mkdir ~/.fonts
+  cp JetBrainsMono.zip ~/.fonts/
+  cp fontawesome-free-6.2.1-desktop.zip ~/.fonts/
+  cd ~/.fonts/
+  unzip JetBrainsMono.zip 
+  unzip fontawesome-free-6.2.1-desktop.zip 
+  cd ~/Dotfiles
+
+  echo "Get Awesome Font and JetBrainMono Nerd Font Done!"
   ;;
 
 0)
