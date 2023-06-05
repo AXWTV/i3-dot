@@ -12,14 +12,13 @@ printf "\e[1;34m
       ░        ░ ░                   ░      ░  ░   ░  ░      ░        ░               ░      ░  ░ ░            ░     ░  ░      ░  
        ░                                                                                                                             
 ┌────────────────────────────────────────────────────┐
-│ [1]  Backup                                        │
-│ [2]  .Config Files                                 │
-│ [3]  Installation deb system softwate              │ 
-│ [4]  Installation arch syatem software             │
-│ [5]  Installation redhat system software           │
-│ [6]  Install oh-my-zsh                             │
-│ [7]  Build Picom                                   │
-│ [8]  .zshrc cp error                               │
+│ [1]  .Config Files                                 │
+│ [2]  Installation deb system softwate              │ 
+│ [3]  Installation arch syatem software             │
+│ [4]  Installation redhat system software           │
+│ [5]  Install oh-my-zsh                             │
+│ [6]  Build Picom                                   │
+│ [7]  .zshrc cp error                               │
 │ [0]  Exit                                          │
 └────────────────────────────────────────────────────┘
 \e[0m"
@@ -28,32 +27,6 @@ read -rp ' ❯ Enter option: ' OPTION
 case "$OPTION" in
 
 1)
-  rm -r .config/alacritty
-  rm -r .config/polybar
-  rm -r .config/i3
-  rm -r .config/picom
-  rm -r .zshrc
-  rm -r .config/neofetch
-  rm -r .confin/nvim
-  rm -r .wallpaper
-  rm -r .config/rofi
-	
-  cp -r ~/.config/alacritty .config/
-  cp -r ~/.config/nvim .config/
-  cp -r ~/.config/polybar .config/
-  cp -r ~/.config/i3 .config/
-  cp -r ~/.config/picom .config/
-  cp -r ~/.config/neofetch .config/
-  cp -r ~/.zshrc .zshrc
-  cp -r ~/color color
-  cp -r ~/.config/rofi .config/
-  
-  git add .
-  git commit -m "backup"
-  git push
-  ;;
-
-2)
   cd
   echo "Configering Confg Files"
   mkdir -p ~/.config/i3
@@ -79,7 +52,7 @@ case "$OPTION" in
   echo "Cofigering Files Done!"
   ;;
 
-3)
+2)
   echo "starting installation..."
   cd
   sudo apt update
@@ -92,7 +65,7 @@ case "$OPTION" in
   echo "Done!"
   ;;
 
-4)
+3)
   echo "starting installation..."
   cd
   echo "Installing Dependencies {Arch-Only}"
@@ -102,7 +75,7 @@ case "$OPTION" in
   echo "Done!"
   ;;
 
-5)
+4)
   echo "Starting installation..."
   cd
   echo "Installing Dependencies {Red_Hat-Only}"
@@ -114,13 +87,13 @@ case "$OPTION" in
   echo "Done!"
   ;;
 
-6)
+5)
   echo "Oh-My-Zsh"
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   echo "installation Complite! run [8]"
   ;;
 
-7)
+6)
   cd
   echo "picom building"
   git clone https://github.com/yshui/picom.git
@@ -133,7 +106,7 @@ case "$OPTION" in
   cd ~/Dotfiles
   ;;
 
-8)
+7)
   rm -r ~/.zshrc
   cp -r .zshrc ~/.zshrc
   ;;
