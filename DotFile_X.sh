@@ -116,8 +116,9 @@ case "$OPTION" in
 8)
   echo "Wallpaper"
   echo "wallpaper set up"
+  mkdir -p ~/.config/wallpaper
 	git clone https://github.com/AXWTV/AXWTV_AniWall.git ~/.config/wallpaper/
-  cd .config/nitrogen ~/.config/
+  cp -r .config/nitrogen ~/.config/
   ;;
 
 9)
