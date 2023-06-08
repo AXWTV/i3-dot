@@ -37,6 +37,31 @@ Run <code>DotFile_X.sh</code>
 ```bash
 ./DotFile_X.sh
 ```
+<br>
+select depending on distro
+```bash
+┌────────────────────────────────────────────────────┐
+│ [1]  .Config Files                                 │
+│ [2]  Installation deb system softwate              │
+│ [3]  Installation arch syatem software             │
+│ [4]  Installation redhat system software           │
+│ [5]  Install oh-my-zsh                             │
+│ [6]  Build Picom                                   │
+│ [7]  .zshrc cp error                               │
+│ [8]  Wallpaper Nitrogen                            │
+│ [9]  Fonts                                         │
+│ [0]  Exit                                          │
+└────────────────────────────────────────────────────┘
+ ❯ Enter option:
+```
+
+Then <code>Build picom</code> if not arch
+<br>
+Then <code>.config files</code> 
+<br>
+<code>font and wallpaper</code>
+<br>
+Last of all <code>install oh-my-zsh</code> and select <code>7</code>
 </details>
 
 
