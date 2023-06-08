@@ -12,6 +12,7 @@ export ZSH="$HOME/.oh-my-zsh"
 #ZSH_THEME="simple"
 #ZSH_THEME="agnoster"
 ZSH_THEME="refined"
+#ZSH_THEME="robbyrussell"
 #ZSH_THEME="peepcode"
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -103,4 +104,4 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim=nvim
-neofetch
+# neofetch
