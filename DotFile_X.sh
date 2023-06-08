@@ -19,8 +19,7 @@ printf "\e[1;34m
 │ [5]  Install oh-my-zsh                             │
 │ [6]  Build Picom                                   │
 │ [7]  .zshrc cp error                               │
-│ [8]  Wallpaper Nitrogen                            │
-│ [9]  Fonts                                         │
+│ [8]  Fonts                                         │
 │ [0]  Exit                                          │
 └────────────────────────────────────────────────────┘
 \e[0m"
@@ -114,14 +113,6 @@ case "$OPTION" in
   ;;
 
 8)
-  echo "Wallpaper"
-  echo "wallpaper set up"
-  mkdir -p ~/.config/wallpaper
-	git clone https://github.com/AXWTV/AXWTV_AniWall.git ~/.config/wallpaper/
-  cp -r .config/nitrogen ~/.config/
-  ;;
-
-9)
   echo "fonts"
   wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/JetBrainsMono.zip
   wget https://use.fontawesome.com/releases/v6.2.1/fontawesome-free-6.2.1-desktop.zip
