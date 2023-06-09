@@ -1,6 +1,15 @@
 # Dotfiles
 <p><code>version: v1.7.9</code> <code>repo-size: 37.4 MiB</code></p>
 <br>
+
+<p align="center">
+	<img src=""/></br>
+	<img src=""/></br>
+	<img src=""/></br>
+	<img src=""/></br>
+</p>
+
+
 # Programs
 
 |       Program       |                                                             Name                                                              |
