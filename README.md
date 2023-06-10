@@ -1,15 +1,5 @@
 # Dotfiles
 <p><code>version: v1.7.9</code> <code>repo-size: 37.4 MiB</code></p>
-<br>
-
-<p align="center">
-	<img src=""/></br>
-	<img src=""/></br>
-	<img src=""/></br>
-	<img src=""/></br>
-</p>
-
-
 # Programs
 
 |       Program       |                                                             Name                                                              |
@@ -25,7 +15,7 @@
 |        Shell        |                                                  [zsh](https://www.zsh.org)                                                   |
 |     Code Editor     |                                 [neovim -> configs](https://github.com/AXWTV/Dotfiles/tree/main/.config/nvim)                 |
 | Notification daemon |                                              [dunst](https://dunst-project.org/)                                              |
-|     Scratch pad     |                                           [tdrop](https://github.com/noctuid/tdrop)                                           |
+|     Scratch pad     |                                           [btop](https://github.com/aristocratos/btop)                                           |
 |        Fetch        |                                     [neofetch](https://github.com/AXWTV/Dotfiles/tree/main/.config/neofetch)                  |
 |    Login manager    |                                        [gnome GDM](https://github.com/gdm-settings/gdm-settings)                              |
 

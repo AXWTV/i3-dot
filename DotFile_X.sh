@@ -59,7 +59,7 @@ case "$OPTION" in
   cd
   sudo apt update
   echo "Installing Dependencies {Deb-Only}"
-  sudo apt install -y i3-gaps polybar alacritty rofi vim dnust neovim feh snapd zsh
+  sudo apt install -y i3-gaps polybar alacritty rofi vim dnust neovim feh snapd zsh btop
   sudo apt install -y libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-dpms0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-glx0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl-dev libegl-dev libpcre2-dev libevdev-dev uthash-dev libev-dev libx11-xcb-dev
   sudo apt install -y cmake meson pkg-config asciidoc curl neofetch
   
@@ -71,7 +71,7 @@ case "$OPTION" in
   echo "starting installation..."
   cd
   echo "Installing Dependencies {Arch-Only}"
-  sudo pacman -S i3-gaps polybar alacritty neofetch rofi zsh feh curl vim nvim && yay -S picom-git
+  sudo pacman -S i3-gaps polybar alacritty neofetch rofi btop zsh feh curl vim nvim && yay -S picom-git
   
   cd ~/Dotfiles
   echo "Done!"
@@ -80,9 +80,8 @@ case "$OPTION" in
 4)
   echo "Starting installation..."
   cd
-  echo "Installing Dependencies {Red_Hat-Only}"
-  sudo dnf copr enable atim/bottom -y
-  sudo dnf install -y i3-gaps polybar bottom dunst alacritty neofetch neovim vim rofi feh nitrogen zsh
+  echo "Installing Dependencies {RHEL-Only}"
+  sudo dnf install -y i3-gaps polybar btop dunst alacritty neofetch neovim vim rofi feh nitrogen zsh
   sudo dnf install -y dbus-devel gcc git libconfig-devel libdrm-devel libev-devel libX11-devel libX11-xcb libXext-devel libxcb-devel libGL-devel libEGL-devel meson pcre2-devel pixman-devel uthash-devel xcb-util-image-devel xcb-util-renderutil-devel xorg-x11-proto-devel asciidoc curl
 
   cd ~/Dotfiles
