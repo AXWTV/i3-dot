@@ -1,5 +1,6 @@
 # Dotfiles
 <p><code>version: v1.7.9</code> <code>repo-size: 37.4 MiB</code></p>
+
 # Programs
 
 |       Program       |                                                             Name                                                              |
@@ -38,6 +39,7 @@ Run <code>DotFile_X.sh</code>
 ```
 <br>
 select depending on distro
+
 ```bash
 ┌────────────────────────────────────────────────────┐
 │ [1]  .Config Files                                 │
@@ -58,7 +60,7 @@ Then <code>Build picom</code> if not arch
 <br>
 Then <code>.config files</code> 
 <br>
-<code>font and wallpaper</code>
+<p><code>font and wallpaper</code> <a herf='https://github.com/AXWTV/AXWTV_AniWall'>Aniwallpaper</a></p>
 <br>
 Last of all <code>install oh-my-zsh</code> and select <code>7</code>
 </details>
