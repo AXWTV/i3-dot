@@ -38,29 +38,28 @@ Run <code>DotFile_X.sh</code>
 ./DotFile_X.sh
 ```
 <br>
-select depending on distro
+Select depending(system softwares) on distro e.g. Arch, Debian, Fedora etc.
 
 ```bash
 ┌────────────────────────────────────────────────────┐
 │ [1]  .Config Files                                 │
-│ [2]  Installation deb system softwate              │
-│ [3]  Installation arch syatem software             │
-│ [4]  Installation redhat system software           │
+│ [2]  Installation Debian system software           │
+│ [3]  Installation Arch syatem software             │
+│ [4]  Installation RHEL/Fedora system software      │
 │ [5]  Install oh-my-zsh                             │
 │ [6]  Build Picom                                   │
 │ [7]  .zshrc cp error                               │
-│ [8]  Wallpaper Nitrogen                            │
-│ [9]  Fonts                                         │
+│ [8]  Fonts                                         │
 │ [0]  Exit                                          │
 └────────────────────────────────────────────────────┘
  ❯ Enter option:
 ```
 
-Then <code>Build picom</code> if not arch
+Then <code>Build picom</code> if not <code>Arch</code>
 <br>
 Then <code>.config files</code> 
 <br>
-<code>font and wallpaper</code> https://github.com/AXWTV/AXWTV_AniWall
+After that<code>font</code> and <code>wallpaper</code> https://github.com/AXWTV/AXWTV_AniWall
 <br>
 Last of all <code>install oh-my-zsh</code> and select <code>7</code>
 </details>

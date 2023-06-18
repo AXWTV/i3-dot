@@ -13,9 +13,9 @@ printf "\e[1;34m
        ░                                                                                                                             
 ┌────────────────────────────────────────────────────┐
 │ [1]  .Config Files                                 │
-│ [2]  Installation deb system softwate              │ 
-│ [3]  Installation arch syatem software             │
-│ [4]  Installation redhat system software           │
+│ [2]  Installation Debian system software           │ 
+│ [3]  Installation Arch syatem software             │
+│ [4]  Installation RHEL/Fedora system software      │
 │ [5]  Install oh-my-zsh                             │
 │ [6]  Build Picom                                   │
 │ [7]  .zshrc cp error                               │
@@ -58,7 +58,7 @@ case "$OPTION" in
   echo "starting installation..."
   cd
   sudo apt update
-  echo "Installing Dependencies {Deb-Only}"
+  echo "Installing Dependencies {Debian-Only}"
   sudo apt install -y i3-gaps polybar alacritty rofi vim dnust neovim feh snapd zsh btop
   sudo apt install -y libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-dpms0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-glx0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl-dev libegl-dev libpcre2-dev libevdev-dev uthash-dev libev-dev libx11-xcb-dev
   sudo apt install -y cmake meson pkg-config asciidoc curl neofetch
