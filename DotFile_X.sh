@@ -38,7 +38,8 @@ case "$OPTION" in
   mkdir -p ~/.config/neofetch
   mkdir -p ~/.config/rofi
   mkdir -p ~/.config/nitrogen
-  
+  mkdir -p ~/.config/dunst
+
   cd ~/Dotfiles
   
   cp -r .config/i3 ~/.config/
@@ -50,6 +51,7 @@ case "$OPTION" in
   cp -r color ~/color
   cp -r .config/rofi ~/.config/
   cp -r .config/neofetch ~/.config/
+  cp -r .config/dunst ~/.config/
   
   echo "Cofigering Files Done!"
   ;;
@@ -59,7 +61,7 @@ case "$OPTION" in
   cd
   sudo apt update
   echo "Installing Dependencies {Debian-Only}"
-  sudo apt install -y i3-gaps polybar alacritty rofi vim dnust neovim feh snapd zsh btop
+  sudo apt install -y i3-gaps polybar alacritty rofi vim dunst neovim feh snapd zsh btop
   sudo apt install -y libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-dpms0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-glx0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl-dev libegl-dev libpcre2-dev libevdev-dev uthash-dev libev-dev libx11-xcb-dev
   sudo apt install -y cmake meson pkg-config asciidoc curl neofetch
   
@@ -71,7 +73,7 @@ case "$OPTION" in
   echo "starting installation..."
   cd
   echo "Installing Dependencies {Arch-Only}"
-  sudo pacman -S i3-gaps polybar alacritty neofetch rofi btop zsh feh curl vim nvim && yay -S picom-git
+  sudo pacman -S i3-gaps polybar alacritty neofetch rofi btop dunst zsh feh curl vim nvim && yay -S picom-git
   
   cd ~/Dotfiles
   echo "Done!"
