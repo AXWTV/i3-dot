@@ -60,7 +60,7 @@ Then <code>Build picom</code> if not arch
 <br>
 Then <code>.config files</code> 
 <br>
-<p><code>font and wallpaper</code> <a herf='https://github.com/AXWTV/AXWTV_AniWall'>Aniwallpaper</a></p>
+<code>font and wallpaper</code> https://github.com/AXWTV/AXWTV_AniWall
 <br>
 Last of all <code>install oh-my-zsh</code> and select <code>7</code>
 </details>
