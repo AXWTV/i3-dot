@@ -13,13 +13,11 @@ printf "\e[1;34m
        ░                                                                                                                             
 ┌────────────────────────────────────────────────────┐
 │ [1]  .Config Files                                 │
-│ [2]  Installation Debian system software           │ 
-│ [3]  Installation Arch syatem software             │
-│ [4]  Installation RHEL/Fedora system software      │
-│ [5]  Install oh-my-zsh                             │
-│ [6]  Build Picom                                   │
-│ [7]  .zshrc cp error                               │
-│ [8]  Fonts                                         │
+│ [2]  Installation system software                  │ 
+│ [3]  Install oh-my-zsh                             │
+│ [4]  Build Picom                                   │
+│ [5]  .zshrc cp error                               │
+│ [6]  Fonts                                         │
 │ [0]  Exit                                          │
 └────────────────────────────────────────────────────┘
 \e[0m"
@@ -57,61 +55,21 @@ case "$OPTION" in
   ;;
 
 2)
-  echo "starting installation..."
-  cd
-  sudo apt update
-  echo "Installing Dependencies {Debian-Only}"
-  sudo apt install -y i3-gaps polybar alacritty rofi vim dunst neovim feh snapd zsh btop
-  sudo apt install -y libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-dpms0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-glx0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl-dev libegl-dev libpcre2-dev libevdev-dev uthash-dev libev-dev libx11-xcb-dev
-  sudo apt install -y cmake meson pkg-config asciidoc curl neofetch
-  
-  git clone https://github.com/catppuccin/rofi.git
-  cd rofi/basic
-  ./install
-  
+  ./.installation_system_software.sh
+  sleep 1
   cd ~/Dotfiles
-
-  echo "Done!"
-  ;;
+;;
+  
 
 3)
-  echo "starting installation..."
-  cd
-  echo "Installing Dependencies {Arch-Only}"
-  sudo pacman -S i3-gaps polybar alacritty neofetch rofi btop dunst zsh feh curl vim nvim && yay -S picom-git
-
-  git clone https://github.com/catppuccin/rofi.git
-  cd rofi/basic
-  ./install
-  
-  cd ~/Dotfiles
-
-  echo "Done!"
-  ;;
-
-4)
-  echo "Starting installation..."
-  cd
-  echo "Installing Dependencies {RHEL-Only}"
-  sudo dnf install -y i3-gaps polybar btop dunst alacritty neofetch neovim vim rofi feh nitrogen zsh
-  sudo dnf install -y dbus-devel gcc git libconfig-devel libdrm-devel libev-devel libX11-devel libX11-xcb libXext-devel libxcb-devel libGL-devel libEGL-devel meson pcre2-devel pixman-devel uthash-devel xcb-util-image-devel xcb-util-renderutil-devel xorg-x11-proto-devel asciidoc curl cmake
-
-  git clone https://github.com/catppuccin/rofi.git
-  cd rofi/basic
-  ./install
-  
-  cd ~/Dotfiles
-
-  echo "Done!"
-  ;;
-
-5)
   echo "Oh-My-Zsh"
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  rm -r ~/.zshrc
+  cp -r .zshrc ~/.zshrc
   echo "installation Complite! run [7]"
   ;;
 
-6)
+4)
   cd
  
   echo "picom building"
@@ -124,12 +82,12 @@ case "$OPTION" in
   cd ~/Dotfiles
   ;;
 
-7)
+5)
   rm -r ~/.zshrc
   cp -r .zshrc ~/.zshrc
   ;;
 
-8)
+6)
   echo "fonts"
   wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/JetBrainsMono.zip
   wget https://use.fontawesome.com/releases/v6.2.1/fontawesome-free-6.2.1-desktop.zip
