@@ -45,7 +45,7 @@ elif [ "$DISTRO" == "Fedora Linux" ]; then
     #installing software
     echo "Installing Dependencies {RHEL-Only}"
     sudo dnf install -y i3-gaps polybar btop dunst alacritty neofetch neovim vim rofi feh nitrogen zsh
-    sudo dnf install -y dbus-devel gcc git libconfig-devel libdrm-devel libev-devel libX11-devel libX11-xcb libXext-devel libxcb-devel libGL-devel libEGL-devel meson pcre2-devel pixman-devel uthash-devel xcb-util-image-devel xcb-util-renderutil-devel xorg-x11-proto-devel asciidoc curl cmake
+    sudo dnf install -y dbus-devel gcc git libconfig-devel libdrm-devel libev-devel libX11-devel libX11-xcb libXext-devel libxcb-devel libGL-devel libEGL-devel meson pcre2-devel pixman-devel uthash-devel xcb-util-image-devel xcb-util-devel xcb-util-renderutil-devel xorg-x11-proto-devel asciidoc curl cmake
     #cloning rofi theme
     git clone https://github.com/catppuccin/rofi.git
     cd rofi/basic
