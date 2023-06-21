@@ -55,7 +55,7 @@ case "$OPTION" in
   ;;
 
 2)
-  ./.installation_system_software.sh
+  source .installation_system_software.sh
   sleep 1
   cd ~/Dotfiles
 ;;
