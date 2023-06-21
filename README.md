@@ -1,6 +1,10 @@
 # Dotfiles
 <p><code>version: v1.7.9</code> <code>repo-size: 37.4 MiB</code></p>
 
+# Support Information
+The Dot Install file only supports Arch, ArcoLinux, Centos, Debian, EndeavourOS, and Fedora
+If you would like your distro to be supported you can add it to the installation_system_software.sh file, and copy over the installation from one of the distros as long as they are based on the same package manager.
+
 # Programs
 
 |       Program       |                                                             Name                                                              |
@@ -26,7 +30,7 @@ Clone into your <code>$HOME</code> directory
   <br>
 
 ```bash
-git clone https://github.com/AXWTV/Dotfiles.git ~
+cd && git clone https://github.com/AXWTV/Dotfiles.git
 ```
 <br>
 
@@ -38,30 +42,24 @@ Run <code>DotFile_X.sh</code>
 ./DotFile_X.sh
 ```
 <br>
-Select depending(system softwares) on distro e.g. Arch, Debian, Fedora etc.
+
+Run the all the options one by one, and run the <code>>[1] config File </code> again.
 
 ```bash
 ┌────────────────────────────────────────────────────┐
 │ [1]  .Config Files                                 │
-│ [2]  Installation Debian system software           │
-│ [3]  Installation Arch syatem software             │
-│ [4]  Installation RHEL/Fedora system software      │
-│ [5]  Install oh-my-zsh                             │
-│ [6]  Build Picom                                   │
-│ [7]  .zshrc cp error                               │
-│ [8]  Fonts                                         │
+│ [2]  Installation system software                  │ 
+│ [3]  Install oh-my-zsh                             │
+│ [4]  Build Picom                                   │
+│ [5]  .zshrc cp error                               │
+│ [6]  Fonts                                         │
 │ [0]  Exit                                          │
 └────────────────────────────────────────────────────┘
  ❯ Enter option:
-```
-
-Then <code>Build picom</code> if not <code>Arch</code>
+``` 
 <br>
-Then <code>.config files</code> 
+My <code>Wallpaper repo</code> https://github.com/AXWTV/AXWTV_AniWall
 <br>
-After that<code>font</code> and <code>wallpaper</code> https://github.com/AXWTV/AXWTV_AniWall
-<br>
-Last of all <code>install oh-my-zsh</code> and select <code>7</code>
 </details>
 
 
