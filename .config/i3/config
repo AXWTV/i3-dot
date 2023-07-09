@@ -2,14 +2,14 @@ set $mod Mod4
 
 # gaps
 for_window [class=".*"] border pixel 0
-gaps inner 20
-gaps outer 10
+gaps inner 10
+gaps outer 5
 smart_borders on
 
 font pango:JetBrainsMono Nerd Font 8
 
 # autostart
-exec_always ~/.config/i3/scripts/polybarstart.sh
+exec_always ~/.config/polybar/launch.sh
 exec_always nitrogen --restore
 exec_always picom --legacy-backends -b
 
@@ -18,7 +18,7 @@ exec_always picom --legacy-backends -b
 exec --no-startup-id dex --autostart --environment i3
  # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec --no-startup-id nm-applet
+exec --no-startup-id nm-applepp
 
 # volume
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -43,6 +43,8 @@ bindsym $mod+d exec ~/.config/rofi/bin/launcher
 bindsym $mod+Shift+d exec ~/.config/rofi/bin/runner
 bindsym $mod+p exec ~/.config/rofi/bin/powermenu
 bindsym $mod+Shift+s exec ~/.config/rofi/bin/screenshot
+
+
 
 # change focus
 bindsym $mod+j focus left
