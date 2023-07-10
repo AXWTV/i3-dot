@@ -18,7 +18,7 @@ printf "\e[1;34m
 │ [4]  Build Picom                                   │
 │ [5]  .zshrc cp error                               │
 │ [6]  Fonts                                         │
-│ [7]  PowerLevel10K                                 │
+│ [7]  PowerLevel10K | zsh-syntax-highlighting       │
 │ [0]  Exit                                          │
 └────────────────────────────────────────────────────┘
 \e[0m"
@@ -55,7 +55,7 @@ case "$OPTION" in
   echo "###############"
   echo "#  Oh-My-Zsh  #"
   echo "###############"
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   rm -r ~/.zshrc
   cp -r .zshrc ~/.zshrc
 
@@ -116,10 +116,11 @@ case "$OPTION" in
   ;;
 
 7)
-  echo "###################"
-  echo "#  PowerLevel10K  #"
-  echo "###################"
+  echo "###############################################"
+  echo "#  PowerLevel10K and zsh-syntax-highlighting  #"
+  echo "###############################################"
   git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
   cp -r .p10k.zsh ~/.p10k.zsh
   echo "###################"
   echo "#    Complete     #"
