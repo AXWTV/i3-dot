@@ -9,9 +9,9 @@ smart_borders on
 font pango:JetBrainsMono Nerd Font 8
 
 # autostart
-exec_always ~/.config/polybar/launch.sh
-exec_always nitrogen --restore
-exec_always picom --legacy-backends -b
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id nitrogen --restore
+exec_always --no-startup-id picom --legacy-backends -b
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -39,10 +39,10 @@ bindsym $mod+q kill
 # start rofi
 # super + {d,r,p,s}
 #	sh $HOME/.config/rofi/bin/{launcher,runner,powermenu,screenshot}
-bindsym $mod+d exec ~/.config/rofi/bin/launcher
-bindsym $mod+Shift+d exec ~/.config/rofi/bin/runner
-bindsym $mod+p exec ~/.config/rofi/bin/powermenu
-bindsym $mod+Shift+s exec ~/.config/rofi/bin/screenshot
+bindsym $mod+d exec sh ~/.config/rofi/launchers/type-7/launcher.sh
+bindsym $mod+Shift+d exec ~/.config/rofi/applets/bin/appasroot.sh
+bindsym $mod+p exec ~/.config/rofi/powermenu/type-5/powermenu.sh
+bindsym $mod+Shift+s exec ~/.config/rofi/applets/bin/screenshot.sh
 
 
 
