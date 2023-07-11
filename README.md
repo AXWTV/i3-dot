@@ -5,6 +5,15 @@
 
 <p>The Dot Install file only supports Arch, ArcoLinux, Centos, Debian, EndeavourOS, and Fedora. Container will be added soon(to get support on all distro).</p>
 
+# Screenshots
+
+<img src="https://raw.githubusercontent.com/AXWTV/Dotfiles/main/.github/Screenshot%20from%202023-07-11%2016-23-02.png">
+<img src="https://raw.githubusercontent.com/AXWTV/Dotfiles/main/.github/Screenshot%20from%202023-07-11%2016-21-38.png">
+<img src="https://raw.githubusercontent.com/AXWTV/Dotfiles/main/.github/Screenshot%20from%202023-07-11%2016-24-12.png">
+<img src="https://raw.githubusercontent.com/AXWTV/Dotfiles/main/.github/Screenshot%20from%202023-07-11%2016-19-20.png">
+<img src="https://raw.githubusercontent.com/AXWTV/Dotfiles/main/.github/Screenshot%20from%202023-07-11%2016-18-41.png">
+<img src="https://raw.githubusercontent.com/AXWTV/Dotfiles/main/.github/Screenshot%20from%202023-07-11%2016-17-48.png">
+
 # Programs
 
 |       Program       |                                                             Name                                                              |
