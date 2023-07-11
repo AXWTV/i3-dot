@@ -2,8 +2,8 @@
 <p><code>version: v1.7.9</code> <code>repo-size: 37.4 MiB</code></p>
 
 # Support Information
-The Dot Install file only supports Arch, ArcoLinux, Centos, Debian, EndeavourOS, and Fedora
-If you would like your distro to be supported you can add it to the installation_system_software.sh file, and copy over the installation from one of the distros as long as they are based on the same package manager.
+
+<p>The Dot Install file only supports Arch, ArcoLinux, Centos, Debian, EndeavourOS, and Fedora. Container will be added soon(to get support on all distro).</p>
 
 # Programs
 
@@ -24,9 +24,9 @@ If you would like your distro to be supported you can add it to the installation
 |        Fetch        |                                     [neofetch](https://github.com/AXWTV/Dotfiles/tree/main/.config/neofetch)                  |
 |    Login manager    |                                        [gnome GDM](https://github.com/gdm-settings/gdm-settings)                              |
 
-<details>
-    <summary><b>Installing</b></summary>
-Clone into your <code>$HOME</code> directory  
+# Installation
+
+<p>Clone into your <code>$HOME</code> directory</p>
   <br>
 
 ```bash
@@ -37,13 +37,14 @@ cd && git clone https://github.com/AXWTV/Dotfiles.git
 ```bash
 cd ~/Dotfiles/
 ```
-Run <code>DotFile_X.sh</code>
+<p>Run <code>DotFile_X.sh</code></p>
+
 ```bash
 ./DotFile_X.sh
 ```
 <br>
 
-Run the all the options one by one, and run the <code>>[1] config File </code> again.
+<p>Run the all the options one by one, and run the <code>>[1] config File </code> again.</p>
 
 ```bash
 ┌────────────────────────────────────────────────────┐
@@ -53,13 +54,14 @@ Run the all the options one by one, and run the <code>>[1] config File </code> a
 │ [4]  Build Picom                                   │
 │ [5]  .zshrc cp error                               │
 │ [6]  Fonts                                         │
+│ [7]  PowerLevel10K | zsh-syntax-highlighting       │
 │ [0]  Exit                                          │
 └────────────────────────────────────────────────────┘
  ❯ Enter option:
 ``` 
-<br>
-My <code>Wallpaper repo</code> https://github.com/AXWTV/AXWTV_AniWall
-<br>
-</details>
 
+<br>
 
+<p>Check Out My <a herf="https://github.com/AXWTV/AXWTV_AniWall">Wallpaper repo</a>.</p>
+
+<p>Help with Linux Configuration, <a herf="https://github.com/AXWTV/Linux-Config-Manual/blob/main/README.md">here!</a></p>
