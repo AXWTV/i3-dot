@@ -71,6 +71,6 @@ cd ~/Dotfiles/
 
 <br>
 
-<p>Check Out My <a herf="https://github.com/AXWTV/AXWTV_AniWall">Wallpaper repo</a>.</p>
+<p>Check Out My https://github.com/AXWTV/AXWTV_AniWallWallpaper repo.</p>
 
-<p>Help with Linux Configuration, <a herf="https://github.com/AXWTV/Linux-Config-Manual/blob/main/README.md">here!</a></p>
+<p>Help with Linux Configuration, https://github.com/AXWTV/Linux-Config-Manual/blob/main/README.md</p>
