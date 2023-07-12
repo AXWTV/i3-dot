@@ -27,15 +27,12 @@ read -rp ' ❯ Enter option: ' OPTION
 case "$OPTION" in
 
 1)
-  cd
   echo "##################################"
   echo "#    Configering Confg Files     #"
   echo "##################################"
 
   mkdir -p ~/.config/
 
-  cd ~/Dotfiles
- 
   cp -r .config/* ~/.config/
 
   echo "##################################"
@@ -45,7 +42,6 @@ case "$OPTION" in
 
 2)
   source .installation_system_software.sh
-  cd ~/Dotfiles
   echo "###################"
   echo "#    Complete     #"
   echo "###################"
@@ -55,6 +51,7 @@ case "$OPTION" in
   echo "###############"
   echo "#  Oh-My-Zsh  #"
   echo "###############"
+  cd
   sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   rm -r ~/.zshrc
   cp -r .zshrc ~/.zshrc
@@ -75,7 +72,6 @@ case "$OPTION" in
   meson setup --buildtype=release . build
   ninja -C build
   sudo ninja -C build install
-  cd ~/Dotfiles
   echo "###################"
   echo "#    Complete     #"
   echo "###################"
@@ -109,7 +105,6 @@ case "$OPTION" in
   unzip JetBrainsMono.zip -d ~/.local/share/fonts
   unzip NerdFontsSymbolsOnly.zip -d ~/.local/share/fonts
 
-  cd ~/Dotfiles
   echo "###################################################" 
   echo "#Get Awesome Font and JetBrainMono Nerd Font Done!#"
   echo "###################################################"
