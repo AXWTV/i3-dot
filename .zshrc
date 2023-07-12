@@ -104,6 +104,47 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+
+# Install alias for Fedora, Arch Linux, and Debian-based distributions
+function alias_install() {
+    # Check if the user is running the script with root privileges
+    if [[ $EUID -ne 0 ]]; then
+        echo "This alias must be run with root privileges."
+        return 1
+    fi
+
+    # Detect the Linux distribution
+    local distro=""
+    if [[ -f /etc/os-release ]]; then
+        # Read the contents of the /etc/os-release file
+        source /etc/os-release
+        distro=$ID
+    fi
+
+    # Install package on Fedora
+    if [[ $distro == "Fedora Linux" || $distro == "CentOS Linux" ]]; then
+        dnf install "$1"
+
+    # Install package on Arch Linux
+    elif [[ $distro == "Arch Linux" || $distro == "ArcoLinux"  ]]; then
+        pacman -Syu "$1"
+
+    # Install package on Debian-based distributions
+    elif [[ $distro == "Debian GNU/Linux" || $distro == "Ubuntu" || $distro == "Linux Mint" ]]; then
+        apt-get update
+        apt-get install "$1"
+
+    # If the distribution is not supported, display an error message
+    else
+        echo "Unsupported distribution: $distro"
+        return 1
+    fi
+}
+
+# Example usage: `install my_package`
+alias install="alias_install"
+
 alias vim=nvim
 alias gt="cd gitthings"
 alias update="sudo dnf update"
