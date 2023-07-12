@@ -13,12 +13,13 @@ font pango:JetBrainsMono Nerd Font 8
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id picom --legacy-backends -b
+exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork 
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -n -b --image=$HOME/gitthings/AXWTV_AniWall/Wallpapers/catppuccin4.png --color=11111b
 # Lock screen Xscreensaver 
 exec --no-startup-id nm-applepp
 
