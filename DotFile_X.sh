@@ -19,6 +19,7 @@ printf "\e[1;35m
 │ [5]  .zshrc cp error                               │
 │ [6]  Fonts                                         │
 │ [7]  PowerLevel10K | zsh-syntax-highlighting       │
+│ [8]  Build EWW                                     │
 │ [0]  Exit                                          │
 └────────────────────────────────────────────────────┘
 \e[0m"
@@ -32,8 +33,10 @@ case "$OPTION" in
   echo "##################################"
 
   mkdir -p ~/.config/
+  mkdir -p ~/.local/bin/
 
   cp -r .config/* ~/.config/
+  cp -r bin/* ~/.local/bin/
 
   echo "##################################"
   echo "#     Cofigering Files Done!     #"
@@ -120,6 +123,17 @@ case "$OPTION" in
   echo "###################"
   echo "#    Complete     #"
   echo "###################"
+  ;;
+
+8)
+  cd
+  rustup default nightly-2020-07-27
+  git clone --depth 1 https://github.com/elkowar/eww.git
+  cd eww
+  cargo build --release --no-default-features --features x11
+  cd target/release
+  chmod +x eww
+  sudo ln -s $(pwd)/eww /usr/local/bin
   ;;
 
 0)

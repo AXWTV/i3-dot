@@ -146,7 +146,7 @@ function alias_install() {
 alias install="alias_install"
 
 alias vim=nvim
-alias gt="cd gitthings"
+alias gt="cd $HOME/gitthings"
 alias update="sudo dnf update"
 alias ls="lsd -a"
 

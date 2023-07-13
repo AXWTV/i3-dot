@@ -23,9 +23,15 @@ if [ "$DISTRO" == "Debian GNU/Linux" ] || [ "$DISTRO" == "Linux Mint" ] || [ "$D
     #installing and updating softwares
     sudo apt update
     echo "Installing Dependencies {Debian-Only}"
-    sudo apt install -y i3-gaps polybar alacritty rofi vim dunst neovim feh snapd zsh btop lsd
-    sudo apt install -y libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-dpms0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-glx0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl-dev libegl-dev libpcre2-dev libevdev-dev uthash-dev libev-dev libx11-xcb-dev
+    sudo apt install -y i3-gaps polybar alacritty rofi vim dunst neovim feh snapd zsh btop lsd pavucontrol thunar ranger
+    sudo apt install -y libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-dpms0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-glx0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl-dev libegl-dev libpcre2-dev libevdev-dev uthash-dev libev-dev libx11-xcb-dev gtk3-devel gdk-pixbuf2-devel cairo-devel glib2-devel glibc-devel pango-devel
     sudo apt install -y cmake meson pkg-config asciidoc curl neofetch 
+    # Cargo and rust
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    #zscroll
+    git clone https://github.com/noctuid/zscroll
+    cd zscroll
+    sudo python3 setup.py install
     #cloning rofi theme
     git clone https://github.com/adi1090x/rofi.git
     cd rofi
@@ -44,9 +50,16 @@ elif [ "$DISTRO" == "Fedora Linux" ] || [ "$DISTRO" == "CentOS Linux" ]; then
     cd
     #installing software
     echo "Installing Dependencies {RHEL-Only}"
-    sudo dnf install -y i3-gaps polybar btop dunst alacritty neofetch neovim vim rofi feh nitrogen zsh lsd 
-    sudo dnf install -y dbus-devel gcc git libconfig-devel libdrm-devel libev-devel libX11-devel libX11-xcb libXext-devel libxcb-devel libGL-devel libEGL-devel meson pcre2-devel pixman-devel uthash-devel xcb-util-image-devel xcb-util-devel xcb-util-renderutil-devel xorg-x11-proto-devel asciidoc curl cmake
-    #cloning rofi theme
+    sudo dnf install -y i3-gaps polybar btop dunst alacritty neofetch neovim vim rofi feh nitrogen zsh lsd pavucontrol thunar ranger
+
+    sudo dnf install -y dbus-devel gcc git libconfig-devel libdrm-devel libev-devel libX11-devel libX11-xcb libXext-devel libxcb-devel libGL-devel libEGL-devel meson pcre2-devel pixman-devel uthash-devel xcb-util-image-devel xcb-util-devel xcb-util-renderutil-devel xorg-x11-proto-devel asciidoc curl cmake gtk3-devel gdk-pixbuf2-devel cairo-devel glib2-devel glibc-devel pango-devel
+    # Cargo and rust
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    #zscroll
+    git clone https://github.com/noctuid/zscroll
+    cd zscroll
+    sudo python3 setup.py install
+    # cloning rofi theme
     git clone https://github.com/adi1090x/rofi.git
     cd rofi
     chmod +x setup.sh
@@ -63,8 +76,11 @@ elif [ "$DISTRO" == "Arch Linux" ] || [ "$DISTRO" == "ArcoLinux" ] || [ "$DISTRO
     cd
     #installing softwares
     echo "Installing Dependencies {Arch-Only}"
-    sudo pacman -S i3-gaps polybar alacritty neofetch rofi btop dunst zsh lsd feh curl vim nvim && yay -S picom-git
-
+    sudo pacman -S i3-gaps polybar alacritty neofetch rofi btop pavucontrol dunst zsh lsd feh curl vim nvim thunar ranger && yay -S picom-git
+    #zscroll
+    git clone https://github.com/noctuid/zscroll
+    cd zscroll
+    sudo python3 setup.py install
     #cloning rofi theme
     git clone https://github.com/adi1090x/rofi.git
     cd rofi
