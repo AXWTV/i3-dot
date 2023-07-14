@@ -4,18 +4,21 @@
 if [ -f /etc/os-release ]; then
     # Read the distribution information
     . /etc/os-release
-    DISTRO=$NAME
-elif [ -f /etc/lsb-release ]; then
+    #DISTRO=$NAME
+    DISTRO=$ID
+elif [ -f /etc/os-release ]; then
     # Read the distribution information
-    . /etc/lsb-release
-    DISTRO=$DISTRIB_ID
+    #. /etc/lsb-release
+    . /etc/os-release
+    #DISTRO=$DISTRIB_ID
+    DISTRO=$ID_LIKE
 else
     echo "Unknown Linux distribution"
     exit 1
 fi
 
 # Run commands based on the distribution
-if [ "$DISTRO" == "Debian GNU/Linux" ] || [ "$DISTRO" == "Linux Mint" ] || [ "$DISTRO" == "Ubuntu" ]; then
+if [ "$DISTRO" == "debian" ] || [ "$DISTRO" == "ubuntu" ]; then
     # Commands for Ubuntu
     # Add your Ubuntu-specific commands here
     echo "starting installation..."
@@ -42,7 +45,7 @@ if [ "$DISTRO" == "Debian GNU/Linux" ] || [ "$DISTRO" == "Linux Mint" ] || [ "$D
 
     echo "Done!"
 
-elif [ "$DISTRO" == "Fedora Linux" ] || [ "$DISTRO" == "CentOS Linux" ]; then
+elif [ "$DISTRO" == "fedora" ]; then
     # Commands for Fedora
     echo "Running commands for Fedora"
     # Add your Fedora-specific commands here
@@ -68,7 +71,7 @@ elif [ "$DISTRO" == "Fedora Linux" ] || [ "$DISTRO" == "CentOS Linux" ]; then
     cd ~/Dotfiles
     echo "Done!"
 
-elif [ "$DISTRO" == "Arch Linux" ] || [ "$DISTRO" == "ArcoLinux" ] || [ "$DISTRO" == "Manjaro Linux" ] || [ "$DISTRO" == "EndeavourOS" ]; then
+elif [ "$DISTRO" == "arch" ]; then
     # Commands for Arch
     echo "Running commands for Arch"
     # Add your Arch-specific commands here
@@ -76,7 +79,7 @@ elif [ "$DISTRO" == "Arch Linux" ] || [ "$DISTRO" == "ArcoLinux" ] || [ "$DISTRO
     cd
     #installing softwares
     echo "Installing Dependencies {Arch-Only}"
-    sudo pacman -S i3-gaps polybar alacritty neofetch rofi btop pavucontrol dunst zsh lsd feh curl vim nvim thunar ranger && yay -S picom-git
+    sudo pacman -S i3-gaps polybar alacritty neofetch rofi btop pavucontrol dunst zsh lsd feh curl vim nvim thunar ranger && yay -S picom-git eww
     #zscroll
     git clone https://github.com/noctuid/zscroll
     cd zscroll
