@@ -34,9 +34,11 @@ case "$OPTION" in
 
   mkdir -p ~/.config/
   mkdir -p ~/.local/bin/
+  mkdir -p ~/.themes/
 
   cp -r .config/* ~/.config/
   cp -r bin/* ~/.local/bin/
+  cp -r .themes/* ~/.themes/
 
   echo "##################################"
   echo "#     Cofigering Files Done!     #"
