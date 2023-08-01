@@ -115,23 +115,28 @@ function alias_install() {
     fi
 
     # Detect the Linux distribution
-    local distro=""
+    #local distro=""
     if [[ -f /etc/os-release ]]; then
         # Read the contents of the /etc/os-release file
         source /etc/os-release
         distro=$ID
+    elif [[ -f /etc/os-release ]]; then
+        source /etc/os-release
+        distro=$ID_LIKE
+    else
+        echo "Unknown Distro"
     fi
 
     # Install package on Fedora
-    if [[ $distro == "Fedora Linux" || $distro == "CentOS Linux" ]]; then
+    if [[ $distro == "fedora" ]]; then
         dnf install "$1"
 
     # Install package on Arch Linux
-    elif [[ $distro == "Arch Linux" || $distro == "ArcoLinux"  ]]; then
+    elif [[ $distro == "arch" ]]; then
         pacman -Syu "$1"
 
     # Install package on Debian-based distributions
-    elif [[ $distro == "Debian GNU/Linux" || $distro == "Ubuntu" || $distro == "Linux Mint" ]]; then
+    elif [[ $distro == "debian" || $distro == "ubuntu" ]]; then
         apt-get update
         apt-get install "$1"
 
@@ -153,5 +158,5 @@ alias ls="lsd -a"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-neofetch
+
 
