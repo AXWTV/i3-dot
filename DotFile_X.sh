@@ -20,6 +20,7 @@ printf "\e[1;35m
 │ [6]  Fonts                                         │
 │ [7]  PowerLevel10K | zsh-syntax-highlighting       │
 │ [8]  Build EWW                                     │
+│ [9]  Install Zscroll                               │
 │ [0]  Exit                                          │
 └────────────────────────────────────────────────────┘
 \e[0m"
@@ -138,6 +139,11 @@ case "$OPTION" in
   sudo ln -s $(pwd)/eww /usr/local/bin
   ;;
 
+9)
+  git clone https://github.com/noctuid/zscroll
+  cd zscroll
+  sudo python3 setup.py install
+  ;;
 0)
   echo "Exiting"
   ;;
