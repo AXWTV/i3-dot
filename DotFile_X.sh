@@ -1,26 +1,20 @@
 #!/bin/bash
 
-printf "\e[1;35m 
-▓█████▄  ▒█████  ▄▄▄█████▓  █████▒██▓ ██▓    ▓█████   ██████     █    ██ ▄▄▄█████▓ ██▓ ██▓     ██▓▄▄▄█████▓ ██▓▓█████   ██████ 
-▒██▀ ██▌▒██▒  ██▒▓  ██▒ ▓▒▓██   ▒▓██▒▓██▒    ▓█   ▀ ▒██    ▒     ██  ▓██▒▓  ██▒ ▓▒▓██▒▓██▒    ▓██▒▓  ██▒ ▓▒▓██▒▓█   ▀ ▒██    ▒ 
-░██   █▌▒██░  ██▒▒ ▓██░ ▒░▒████ ░▒██▒▒██░    ▒███   ░ ▓██▄      ▓██  ▒██░▒ ▓██░ ▒░▒██▒▒██░    ▒██▒▒ ▓██░ ▒░▒██▒▒███   ░ ▓██▄   
-░▓█▄   ▌▒██   ██░░ ▓██▓ ░ ░▓█▒  ░░██░▒██░    ▒▓█  ▄   ▒   ██▒   ▓▓█  ░██░░ ▓██▓ ░ ░██░▒██░    ░██░░ ▓██▓ ░ ░██░▒▓█  ▄   ▒   ██▒
-░▒████▓ ░ ████▓▒░  ▒██▒ ░ ░▒█░   ░██░░██████▒░▒████▒▒██████▒▒   ▒▒█████▓   ▒██▒ ░ ░██░░██████▒░██░  ▒██▒ ░ ░██░░▒████▒▒██████▒▒
- ▒▒▓  ▒ ░ ▒░▒░▒░   ▒ ░░    ▒ ░   ░▓  ░ ▒░▓  ░░░ ▒░ ░▒ ▒▓▒ ▒ ░   ░▒▓▒ ▒ ▒   ▒ ░░   ░▓  ░ ▒░▓  ░░▓    ▒ ░░   ░▓  ░░ ▒░ ░▒ ▒▓▒ ▒ ░
-  ░ ▒  ▒   ░ ▒ ▒░     ░     ░      ▒ ░░ ░ ▒  ░ ░ ░  ░░ ░▒  ░ ░   ░░▒░ ░ ░     ░     ▒ ░░ ░ ▒  ░ ▒ ░    ░     ▒ ░ ░ ░  ░░ ░▒  ░ ░
-   ░ ░  ░ ░ ░ ░ ▒    ░       ░ ░    ▒ ░  ░ ░      ░   ░  ░  ░      ░░░ ░ ░   ░       ▒ ░  ░ ░    ▒ ░  ░       ▒ ░   ░   ░  ░  ░  
-      ░        ░ ░                   ░      ░  ░   ░  ░      ░        ░               ░      ░  ░ ░            ░     ░  ░      ░  
-       ░                                                                                                                             
+printf "\e[1;37m 
+█▀▄ █▀█ ▀█▀ █▀▀ ▀█▀ █   █▀▀ 
+█▄▀ █▄█  █  █▀  ▄█▄ █▄▄ ██▄ 
+                            By AXWTV 
+
 ┌────────────────────────────────────────────────────┐
-│ [1]  .Config Files                                 │
+│ [1]  Dot-Config Files                              │
 │ [2]  Installation system software                  │ 
 │ [3]  Install oh-my-zsh                             │
 │ [4]  Build Picom                                   │
-│ [5]  .zshrc cp error                               │
+│ [5]  Dot-zshrc cp error                            │
 │ [6]  Fonts                                         │
 │ [7]  PowerLevel10K | zsh-syntax-highlighting       │
 │ [8]  Build EWW                                     │
-│ [9]  Install Zscroll                               │
+│ [9]  App-Installation                              │
 │ [0]  Exit                                          │
 └────────────────────────────────────────────────────┘
 \e[0m"
@@ -29,6 +23,7 @@ read -rp ' ❯ Enter option: ' OPTION
 case "$OPTION" in
 
 1)
+  SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
   echo "##################################"
   echo "#    Configering Confg Files     #"
   echo "##################################"
@@ -44,13 +39,16 @@ case "$OPTION" in
   echo "##################################"
   echo "#     Cofigering Files Done!     #"
   echo "##################################"
+  "$SCRIPT_DIR/DotFile_X.sh"
   ;;
 
 2)
+  SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
   source .installation_system_software.sh
   echo "###################"
   echo "#    Complete     #"
   echo "###################"
+  "$SCRIPT_DIR/DotFile_X.sh"
   ;;
   
 3)
@@ -68,6 +66,7 @@ case "$OPTION" in
   ;;
 
 4)
+  SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
   cd
   echo "##################"
   echo "# picom building #"
@@ -81,9 +80,11 @@ case "$OPTION" in
   echo "###################"
   echo "#    Complete     #"
   echo "###################"
+  "$SCRIPT_DIR/DotFile_X.sh"
   ;;
 
 5)
+  SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
   rm -r ~/.zshrc
   rm -r ~/.p10k.zsh
   cp -r .zshrc ~/.zshrc
@@ -91,9 +92,11 @@ case "$OPTION" in
   echo "###################"
   echo "#    Complete     #"
   echo "###################"
+  "$SCRIPT_DIR/DotFile_X.sh"
   ;;
 
 6)
+  SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
   echo "#######################"
   echo "#        Fonts        #"
   echo "#######################"
@@ -114,9 +117,11 @@ case "$OPTION" in
   echo "###################################################" 
   echo "#Get Awesome Font and JetBrainMono Nerd Font Done!#"
   echo "###################################################"
+  "$SCRIPT_DIR/DotFile_X.sh"
   ;;
 
 7)
+  SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
   echo "###############################################"
   echo "#  PowerLevel10K and zsh-syntax-highlighting  #"
   echo "###############################################"
@@ -126,9 +131,11 @@ case "$OPTION" in
   echo "###################"
   echo "#    Complete     #"
   echo "###################"
+  "$SCRIPT_DIR/DotFile_X.sh"
   ;;
 
 8)
+  SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
   cd
   rustup default nightly-2020-07-27
   git clone --depth 1 https://github.com/elkowar/eww.git
@@ -137,13 +144,14 @@ case "$OPTION" in
   cd target/release
   chmod +x eww
   sudo ln -s $(pwd)/eww /usr/local/bin
+
+  "$SCRIPT_DIR/DotFile_X.sh"
   ;;
 
 9)
-  git clone https://github.com/noctuid/zscroll
-  cd zscroll
-  sudo python3 setup.py install
+  source App-Installation.sh
   ;;
+
 0)
   echo "Exiting"
   ;;
