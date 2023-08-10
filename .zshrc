@@ -154,6 +154,8 @@ alias vim=nvim
 alias gt="cd $HOME/gitthings"
 alias update="sudo dnf update"
 alias ls="lsd -a"
+# User specific aliases and functions
+alias code="flatpak run com.visualstudio.code"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
