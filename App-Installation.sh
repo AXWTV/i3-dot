@@ -3,23 +3,28 @@
 printf "\e[1;37m 
 █▀▀ █▀█ █▀▀ ▀█▀ █ █ █ ▄▀▄ █▀█ █▀▀ 
 ▄██ █▄█ █▀   █  ▀▄▀▄▀ █▀█ █▀▄ ██▄  
+                                INSTALL BY AXWTV
 
 make sure to have snapd and flatpak with flathub.
                                                                       
-┌────────────────────────────────────────────────────┐
-│ [1]  VS-Code                                       │
-│ [2]  Chrome                                        │
-│ [3]  Firefox                                       │
-│ [4]  Brave                                         │
-│ [5]  Blender                                       │
-│ [6]  Libre Office                                  │
-│ [7]  Vlc                                           │
-│ [8]  Flame Shot                                    │
-│ [9]  Discord                                       │
-│ [10] OBS                                           │
-│ [11] Spotify                                       │
-│ [0]  Exit                                          │
-└────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────┐
+│ [1]  VS-Code                                                     │
+│ [2]  Chrome                                                      │
+│ [3]  Firefox                                                     │
+│ [4]  Brave                                                       │
+│ [5]  Blender                                                     │
+│ [6]  Libre Office                                                │
+│ [7]  Vlc                                                         │
+│ [8]  Flame Shot                                                  │
+│ [9]  Discord                                                     │
+│ [10] OBS                                                         │
+│ [11] Spotify                                                     │
+│ [12] KDElive                                                     │
+│ [13] Audacity                                                    │
+│ [14] GNU Image Manipulation Program                              │
+│ [15] Krita                                                       │
+│ [0]  Exit                                                        │
+└──────────────────────────────────────────────────────────────────┘
 \e[0m"
 read -rp ' ❯ Enter option: ' OPTION
 
@@ -91,6 +96,30 @@ case "$OPTION" in
   "$SCRIPT_DIR/App-Installation.sh"
   ;;
 
+12)
+  SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+  flatpak install flathub org.kde.kdenlive
+  "$SCRIPT_DIR/App-Installation.sh"
+  ;;
+
+13)
+  SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+  flatpak install flathub org.audacityteam.Audacity
+  "$SCRIPT_DIR/App-Installation.sh"
+  ;;
+
+14)
+  SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+  flatpak install flathub org.gimp.GIMP
+  "$SCRIPT_DIR/App-Installation.sh"
+  ;;
+
+15)
+  SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+  flatpak install flathub org.kde.krita
+  "$SCRIPT_DIR/App-Installation.sh"
+  ;;
+  
 0)
   echo "Exiting"
   ;;
