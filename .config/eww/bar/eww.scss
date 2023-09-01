@@ -210,38 +210,40 @@ color: #3e424f;
 
 .cal {
      &.highlight {
-          padding: 20px;
+          padding: 10px;
       }
 
-      padding: 5px 5px 5px 5px;
+      padding: 10px 10px 1px 10px;
       margin-left: 10px;
     }
   }
 }
 
 calender {
-    color: #353847;
+    color: #8294e4;
 }
 calendar:selected {
-  color: #d780ff;
+  color: #b4befe;
+  background-color: #313244;
+  border-radius: 500px;
 }
 
 calendar.header {
-color: #cdd6f4;
+color: #b4befe;
 font-weight: bold;
 }
 
 calendar.button {
-color: #545c7c;
+color: #a6adc8;
 }
 
 calendar.highlight {
-color: #cdd6f4;
+color: #b4befe;
 font-weight: bold;
 }
 
 calendar:indeterminate {
-color: #4d4e55;
+color: #686b81;
 }
 
 

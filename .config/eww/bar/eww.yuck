@@ -272,9 +272,9 @@
 			  :year calendar_year))))
 
 (defwindow calendar
-	:geometry (geometry :x "-30px" 
-						:y "3%" 
-                        :anchor "top right"
+	:geometry (geometry :x "0px" 
+						:y "4%" 
+                        :anchor "top center"
 						:width "270px" 
 						:height "60px")
 (cal))
