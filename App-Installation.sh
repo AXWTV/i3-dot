@@ -23,6 +23,7 @@ make sure to have snapd and flatpak with flathub.
 │ [13] Audacity                                                    │
 │ [14] GNU Image Manipulation Program                              │
 │ [15] Krita                                                       │
+│ [16] Obsidian                                                    │
 │ [0]  Exit                                                        │
 └──────────────────────────────────────────────────────────────────┘
 \e[0m"
@@ -119,6 +120,13 @@ case "$OPTION" in
   flatpak install flathub org.kde.krita
   "$SCRIPT_DIR/App-Installation.sh"
   ;;
+
+16)
+  SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+  flatpak install flathub md.obsidian.Obsidian
+  "$SCRIPT_DIR/App-Installation.sh"
+  ;;
+
   
 0)
   echo "Exiting"

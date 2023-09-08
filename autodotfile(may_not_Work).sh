@@ -11,7 +11,8 @@ depending on your OS or unsupported drives.
 │ [1]  YES                        │
 │ [2]  NO                         │
 │ Then do these Manually \/       │ 
-│ [3]  NO                         │  
+│ [3]  OMZ                        │ 
+│ [4]  PL10                       │ 
 │ [0]  Exit                       │
 └─────────────────────────────────┘
 \e[0m"
