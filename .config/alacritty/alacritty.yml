@@ -15,6 +15,7 @@ window:
   opacity: 1
 
 
+
 scrolling:
   history: 10000
   multiplier: 3
