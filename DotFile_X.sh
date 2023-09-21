@@ -32,10 +32,10 @@ case "$OPTION" in
   mkdir -p ~/.local/bin/
   mkdir -p ~/.themes/
 
-  cp -r .config/* ~/.config/
-  cp -r bin/* ~/.local/bin/
-  cp -r .themes/* ~/.themes/
-  cp -r .themes/* ~/.config/gtk-4.0s
+  cp -r .config/ ~/.config/
+  cp -r bin/ ~/.local/bin/
+  cp -r .themes/ ~/.themes/
+  cp -r .themes/ ~/.config/gtk-4.0s
 
   echo "##################################"
   echo "#     Cofigering Files Done!     #"
