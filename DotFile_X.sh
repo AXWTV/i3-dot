@@ -23,7 +23,7 @@ read -rp ' ❯ Enter option: ' OPTION
 case "$OPTION" in
 
 1)
-  SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)
+  SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
   echo "##################################"
   echo "#    Configering Confg Files     #"
   echo "##################################"
@@ -32,10 +32,9 @@ case "$OPTION" in
   mkdir -p ~/.local/bin/
   mkdir -p ~/.themes/
 
-  cp -r .config/ ~/.config/
-  cp -r bin/ ~/.local/bin/
-  cp -r .themes/ ~/.themes/
-  cp -r .themes/ ~/.config/gtk-4.0s
+  cp -r .config/* ~/.config/
+  cp -r bin/* ~/.local/bin/
+  cp -r .themes/* ~/.themes/
 
   echo "##################################"
   echo "#     Cofigering Files Done!     #"
