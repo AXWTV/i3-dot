@@ -1,5 +1,5 @@
 # Dotfiles
-<p><code>version: 15.0.1</code> <code>repo-size: 82 MB</code></p>
+<p><code>version: 5.0.1</code> <code>repo-size: 82 MB</code></p>
 
 # Support Information
 
