@@ -24,7 +24,7 @@
 |        Shell        |                                                  [zsh](https://www.zsh.org)                                                   |
 |     Code Editor     |                                 [neovim -> configs](https://github.com/AXWTV/Dotfiles/tree/main/.config/nvim)                 |
 | Notification daemon |                                              [dunst](https://dunst-project.org/)                                              |
-|     Scratch pad     |                                           [btop](https://github.com/aristocratos/btop)                                           |
+|     Scratch pad     |                                           [btop](https://github.com/aristocratos/btop)                                        |
 |        Fetch        |                                     [neofetch](https://github.com/AXWTV/Dotfiles/tree/main/.config/neofetch)                  |
 |    Login manager    |                                        [gnome GDM](https://github.com/gdm-settings/gdm-settings)                              |
 
