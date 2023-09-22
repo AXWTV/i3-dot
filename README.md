@@ -7,7 +7,7 @@
 
 # Screenshots
 
-<img src="https://raw.githubusercontent.com/AXWTV/Dotfiles/main/.github/Screenshot%20from%202023-07-11%2016-23-02.png">
+![alt text](https://raw.githubusercontent.com/AXWTV/Dotfiles/main/.github/Github%20wallCatppuccin.jpg)
 
 # Programs
 
@@ -79,29 +79,48 @@ Help with Linux Configuration, https://github.com/AXWTV/Linux-Config-Manual/blob
 # Cheat-Sheet
 
 Win+d            Rofi / App-laucher
+
 Win+Shift+d      App-shortcut
+
 Win+p            Powermenu
+
 Win+x            Lockscreen
+
 Win+i            Audio-Control / Pavucontrol
+
 WIn+Return/Enter Alacritty / Terminal
+
 Win+q            Kill focus Window
 
+
+
 Win+h            Split in horizontal orientation
+
 Win+v            Split in vertical orientation
+
 
 Win+f            Enter fullscreen mode for the focused container
 
 
 ### change container layout (stacked, tabbed, toggle split)
+
 Win+s layout stacking
+
 Win+w layout tabbed
+
 Win+e layout toggle split
 
+
 Win+Shift+space  Toggle tiling / floating
+
 Win+space        Change focus between tiling / floating windows
+
 Win+a            Focus the parent container
 
+
+
 Win+Shift+minus  Make the currently focused window a scratchpad
+
 Win+minus        Show the first scratchpad window
 
 
