@@ -14,7 +14,8 @@ printf "\e[1;37m
 │ [6]  Fonts                                         │
 │ [7]  PowerLevel10K | zsh-syntax-highlighting       │
 │ [8]  Build EWW                                     │
-│ [9]  App-Installation                              │
+│ [9]  Rofi - Emoji 😀                               │
+│ [10]  App-Installation                             │
 │ [0]  Exit                                          │
 └────────────────────────────────────────────────────┘
 \e[0m"
@@ -33,7 +34,7 @@ case "$OPTION" in
   mkdir -p ~/.themes/
 
   cp -r .config/* ~/.config/
-  cp -r bin/* ~/.local/bin/
+  cp -r .local/* ~/.local/
   cp -r .themes/* ~/.themes/
 
   echo "##################################"
@@ -149,6 +150,23 @@ case "$OPTION" in
   ;;
 
 9)
+  SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+  cd 
+  git clone https://github.com/Mange/rofi-emoji.git
+  cd rofi-emoji
+  autoreconf -i
+  mkdir build
+  cd build
+  ../configure
+  make
+  sudo make install
+  echo "###################"
+  echo "#    Complete     #"
+  echo "###################"
+  "$SCRIPT_DIR/DotFile_X.sh"
+  ;;
+
+10)
   source App-Installation.sh
   ;;
 
