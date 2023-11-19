@@ -24,6 +24,7 @@ make sure to have snapd and flatpak with flathub.
 │ [14] GNU Image Manipulation Program                              │
 │ [15] Krita                                                       │
 │ [16] Obsidian                                                    │
+│ [17] AntimicroX                                                  │
 │ [0]  Exit                                                        │
 └──────────────────────────────────────────────────────────────────┘
 \e[0m"
@@ -124,6 +125,12 @@ case "$OPTION" in
 16)
   SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
   flatpak install flathub md.obsidian.Obsidian
+  "$SCRIPT_DIR/App-Installation.sh"
+  ;;
+
+17)
+  SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+  flatpak install flathub io.github.antimicrox.antimicrox
   "$SCRIPT_DIR/App-Installation.sh"
   ;;
 
